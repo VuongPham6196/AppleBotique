@@ -138,8 +138,7 @@ const ProductDetail = () => {
       <div className={classes['detail-description']}>
         <h3>DESCRIPTION</h3>
         <h4 className={classes['description-header']}>PRODUCT DESCRIPTION</h4>
-
-        <div dangerouslySetInnerHTML={{ __html: product.long_desc }} />
+        <pre>{product.long_desc}</pre>
       </div>
     </Fragment>
   );
