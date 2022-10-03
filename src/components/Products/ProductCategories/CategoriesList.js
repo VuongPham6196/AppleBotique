@@ -11,6 +11,7 @@ import product_5 from '../../../assets/images/product_5.png';
 const CategoriesList = () => {
   const navigate = useNavigate();
 
+  // Chuyển đến trang Shop với category đã được click
   const GoToShopHandler = event => {
     navigate(`/shop/?type=${event.target.alt}`);
   };

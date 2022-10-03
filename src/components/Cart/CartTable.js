@@ -7,12 +7,14 @@ import BackIcon from '../Icon/BackIcon';
 import NextIcon from '../Icon/NextIcon';
 
 const CartTable = props => {
-  const cartList = useSelector(state => state.cart.items);
+  const cartList = useSelector(state => state.cart.items); // nhập mảng các sản phẩm có trong giỏ hàng từ store.
 
+  // lặp mảng cartList để trả về các item
   let cartListContent = cartList.map((item, index) => {
     return <CartItem key={index} data={item} />;
   });
 
+  // nếu không có sản phẩm trong giỏ hàng thì trả về thẻ <p> no products
   let noProductsContent;
   if (cartList.length === 0) {
     noProductsContent = (

@@ -13,6 +13,7 @@ const categoriesTitleData = [
 const CategoriesNavbar = () => {
   const navigate = useNavigate();
 
+  // hàm navigate đến trang filter theo loại sản phẩm.
   const onFilterHandler = type => {
     navigate(`/shop?type=${type}`);
   };

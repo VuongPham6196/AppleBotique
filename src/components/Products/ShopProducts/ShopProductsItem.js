@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const ShopProductsItem = props => {
   const navigate = useNavigate();
 
+  // Chuyển đên trang xem chi tiết khi click vào sản phẩm ở trang Shop.
   const goToDetailHandler = () => {
     navigate(`/detail/${props.product._id.$oid}`);
   };

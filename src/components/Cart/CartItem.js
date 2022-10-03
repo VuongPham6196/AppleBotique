@@ -7,14 +7,17 @@ import { cartActions } from '../../store/cart';
 const CartItem = props => {
   const dispatch = useDispatch();
 
+  // Hàm tăng số lượng khi click vào nút xóa trong giỏ hàng, truyền vào id của item cần bớt, amout:1
   const addHandler = () => {
     dispatch(cartActions.add({ data: props.data, amount: 1 }));
   };
 
+  // Hàm giảm số lượng khi click vào nút xóa trong giỏ hàng, truyền vào id của item cần bớt, mặc định giảm 1 mỗi lần click
   const removeHandler = () => {
     dispatch(cartActions.remove({ id: props.data._id.$oid }));
   };
 
+  // Hàm xóa item khi click vào nút xóa trong giỏ hàng, truyền vào id của item cần xóa
   const deleteItemHandler = () => {
     dispatch(cartActions.delete({ id: props.data._id.$oid }));
   };

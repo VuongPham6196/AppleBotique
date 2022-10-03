@@ -13,16 +13,20 @@ import { authActions } from '../../store/auth';
 const NavBar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [cartIsBump, setCartIsBump] = useState(false);
 
+  const [cartIsBump, setCartIsBump] = useState(false); //state thay đổi class của số lượng sản phẩm trong giỏ hàng. Mỗi lần sản phẩm thay đổi sẽ có animation trên giỏ hàng.
+
+  // Nhập thông tin đã đăng nhập hay chưa và dữ liệu giỏ hàng từ Store.
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
   const cartList = useSelector(state => state.cart.items);
 
+  // Hàm đăng xuất.
   const logoutHandler = () => {
     dispatch(authActions.logout());
     navigate('/login');
   };
 
+  // Khai báo số lượng sản phẩm
   const numberOfCartItems = cartList.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
@@ -31,6 +35,7 @@ const NavBar = () => {
     cartIsBump ? classes.bump : ''
   }`;
 
+  // Mỗi khi danh sách thay đổi thì sẽ thực hiện thêm và xóa class annimation cho số lượng sản phẩm trên navbar.
   useEffect(() => {
     if (cartList.length === 0) {
       return;

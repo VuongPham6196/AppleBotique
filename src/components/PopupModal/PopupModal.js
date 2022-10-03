@@ -10,8 +10,9 @@ import classes from './PopupModal.module.css';
 const PopupModal = props => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const product = useSelector(state => state.detailModal.product);
+  const product = useSelector(state => state.detailModal.product); // nhập dữ liệu sản phẩm được click từ store.
 
+  //Khi click vào nút viewdetail thì sẽ đóng cửa sổ và chuyển đến trang Detail
   const onViewDetailHandler = () => {
     dispatch(detailModalActions.hide_popup());
     navigate(`/detail/${product._id.$oid}`);

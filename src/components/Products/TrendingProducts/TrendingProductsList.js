@@ -6,6 +6,7 @@ const TrendingProductsList = () => {
   const [productsData, setProductsData] = useState([]);
   const [errorMsg, setErrorMsg] = useState(null);
 
+  // Fecth lấy dữ liệu sản phẩm trending.
   useEffect(() => {
     fetch(
       'https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74'
@@ -26,6 +27,7 @@ const TrendingProductsList = () => {
       });
   }, []);
 
+  // lặp mảng và trả về trending item
   let trendingContent = (
     <Fragment>
       <div className={classes['trending-list']}>

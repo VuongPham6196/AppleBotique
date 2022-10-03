@@ -11,8 +11,9 @@ const RelatedProducts = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const params = useParams();
-  const { id } = params;
+  const { id } = params; // Lấy id sản phẩm từ URL
 
+  // Fetch lấy thông tin của những sản phẩm có cùng category với sản phẩm đang xem.
   useEffect(() => {
     setIsLoading(true);
     fetch(
@@ -45,12 +46,14 @@ const RelatedProducts = () => {
       });
   }, [id]);
 
+  // Nếu lỗi thì return thông báo lỗi
   if (errorMsg) {
     return <p className="centered">{errorMsg}</p>;
   }
 
   let relatedContent;
 
+  //Nếu có sản phẩm cùng loại thì render sản phẩm đó ra.Không có thì thông báo cho người dùng
   if (relatedProduct.length > 0) {
     relatedContent = relatedProduct.map((item, index) => {
       return (

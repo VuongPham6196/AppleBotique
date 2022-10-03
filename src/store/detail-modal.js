@@ -13,10 +13,12 @@ const detailModalSlice = createSlice({
   name: 'detailModal',
   initialState: initialState,
   reducers: {
+    //update thông tin sản phẩm được click và set hiện modal.
     show_popup(state, action) {
       state.product = action.payload.clickedProduct;
       state.showModal = true;
     },
+    // Trả về state ban đầu
     hide_popup() {
       return initialState;
     },

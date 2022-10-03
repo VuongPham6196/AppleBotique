@@ -14,26 +14,30 @@ const ProductDetail = () => {
   const dispatch = useDispatch();
 
   const params = useParams();
-  const { id } = params;
+  const { id } = params; //Lấy id sản phẩm từ URL
 
   const amountRef = useRef();
 
+  // Hàm thay đổi ảnh của sản phẩm.
   const changeImageHandler = event => {
     setImageLink(event.target.src);
   };
 
+  // Tăng số lượng cần mua
   const increaseHandler = () => {
     if (Number(amountRef.current.value) < 5) {
       amountRef.current.value = Number(amountRef.current.value) + 1;
     }
   };
 
+  // Giảm số lượng cần mua
   const decreaseHandler = () => {
     if (Number(amountRef.current.value > 1)) {
       amountRef.current.value = Number(amountRef.current.value) - 1;
     }
   };
 
+  //Khi click button ADD TO CART thì dispatch hành động add đến store, truyền vào Obj chứa thông tin sản phẩm và số lượng cần thêm.
   const addToCartHandler = () => {
     const addItemObj = {
       ...product,
@@ -47,6 +51,7 @@ const ProductDetail = () => {
     );
   };
 
+  // Fetch lấy thông tin của sản phẩm bằng id nhận được từ URL, sẽ được chạy lại khi id thay đổi.
   useEffect(() => {
     fetch(
       'https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74'

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import GiftIcon from '../Icon/GiftIcon';
 
 const CartTotal = () => {
-  const totalAmount = useSelector(state => state.cart.totalAmount);
+  const totalAmount = useSelector(state => state.cart.totalAmount); // nhập tổng giá tiền từ store.
 
   return (
     <div className={classes['total-container']}>

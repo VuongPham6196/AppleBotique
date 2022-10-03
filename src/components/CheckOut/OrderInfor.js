@@ -2,6 +2,7 @@ import classes from './OrderInfor.module.css';
 import { useSelector } from 'react-redux';
 
 const OrderInfor = () => {
+  // nhập dữ liệu giỏ hàng từ store
   const totalAmount = useSelector(state => state.cart.totalAmount);
   const listCart = useSelector(state => state.cart.items);
 

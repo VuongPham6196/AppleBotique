@@ -11,6 +11,7 @@ const authSlice = createSlice({
   name: 'authentication',
   initialState: initialState,
   reducers: {
+    // Lưu thông tin đăng nhập xuống LocalStorage và update state.
     login(state, action) {
       localStorage.setItem(
         'currentUser',
@@ -22,6 +23,7 @@ const authSlice = createSlice({
       state.password = action.payload.userDataObj.password;
       state.isLoggedIn = true;
     },
+    // Xóa thông tin đăng nhập trong LocalStorage và trả về state ban đầu.
     logout() {
       localStorage.removeItem('currentUser');
       return initialState;

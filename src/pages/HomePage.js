@@ -11,14 +11,15 @@ const HomePage = props => {
   const dispatch = useDispatch();
   const showModal = useSelector(state => state.detailModal.showModal);
 
+  //Ẩn popup_modal khi click ra phía ngoài modal
   const closeModalHandler = event => {
     event.stopPropagation();
     dispatch(detailModalActions.hide_popup());
   };
 
+  //Ẩn popup_modal khi nhấn phím ESC
   window.onkeydown = function (e) {
     if (e.keyCode === 27) {
-      // Key code for ESC key
       dispatch(detailModalActions.hide_popup());
     }
   };

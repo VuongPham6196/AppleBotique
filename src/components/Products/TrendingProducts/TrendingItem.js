@@ -5,6 +5,7 @@ import { detailModalActions } from '../../../store/detail-modal';
 const TrendingItem = props => {
   const dispatch = useDispatch();
 
+  // Khi click vào 1 sản phẩm ở phần trending (trang chủ) thì dispatch hành động hiện popup_modal tới store, truyền vào 1 Obj chứa thông tin sản phẩm đó.
   const showModalHandler = () => {
     dispatch(detailModalActions.show_popup({ clickedProduct: props.product }));
   };

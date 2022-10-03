@@ -14,8 +14,9 @@ const ShopProductsList = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
 
-  const productType = queryParams.get('type');
+  const productType = queryParams.get('type'); // Lấy thông tin loại sản phẩm từ URL
 
+  //Fecth lấy dữ liệu theo từng loại sản phẩm, tất cả (all) hoặc một loại theo biến producType.
   useEffect(() => {
     setIsLoading(true);
     fetch(
@@ -43,6 +44,7 @@ const ShopProductsList = () => {
       });
   }, [productType]);
 
+  // Nếu đang fetch thì render Loading spinner
   if (isLoading) {
     return (
       <div className="centered">
@@ -54,6 +56,7 @@ const ShopProductsList = () => {
   if (!isLoading && productsData.length === 0) {
     return <p className="centered">No Products Found!</p>;
   }
+
   let trendingContent = (
     <Fragment>
       <div className={classes['shop-list']}>
