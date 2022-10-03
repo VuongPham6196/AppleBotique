@@ -1,0 +1,37 @@
+.page-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.navigate {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.page-number span {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.navigate button {
+  border: none;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.navigate button:hover {
+  background-color: rgb(128, 128, 128, 0.1);
+  cursor: pointer;
+}
+
+.page-number p {
+  color: rgb(90, 90, 90);
+}

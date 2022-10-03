@@ -1,0 +1,130 @@
+.main-detail {
+  display: flex;
+}
+.main-detail button {
+  font-size: 16px;
+}
+
+.detail-image {
+  display: flex;
+  padding: 20px;
+  width: 50%;
+}
+
+.main-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  padding: 10px;
+}
+.main-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mini-image-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.mini-image-list img {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.mini-image-list img:hover {
+  cursor: pointer;
+  padding: 0px;
+}
+
+.detail-content {
+  width: 50%;
+  padding: 20px;
+  align-self: center;
+  color: rgb(90, 90, 90);
+}
+.detail-content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: black;
+}
+.content-price {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.quantity {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.quantity-counter {
+  border: 1px solid rgb(90, 90, 90, 0.1);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.quantity-counter input {
+  width: 15px;
+  border: none;
+  background-color: white;
+  text-align: center !important;
+}
+
+.quantity-counter button {
+  color: black;
+  background-color: white;
+  border: none;
+  font-size: 30px;
+}
+
+.add-to-cart {
+  background-color: black;
+  height: 40px;
+  width: 150px;
+  color: white;
+  font-style: italic;
+}
+
+.detail-description {
+  padding: 50px 0;
+}
+
+.detail-description h3 {
+  color: white;
+  background-color: black;
+  width: 150px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
+.detail-description p {
+  color: rgb(90, 90, 90);
+}
+
+.detail-description .description-header {
+  font-weight: 500;
+  color: black;
+  margin: 20px 0;
+  font-size: 20px;
+}
+.detail-description pre {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  white-space: pre-wrap;
+  /* line-height: 1; */
+  color: rgb(90, 90, 90);
+  tab-size: 4;
+}

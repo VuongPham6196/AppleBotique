@@ -1,0 +1,35 @@
+.cart-item-row {
+  color: rgb(50, 50, 50);
+}
+
+.cart-item-row img {
+  width: 70%;
+  height: 70%;
+}
+
+.cart-item-row td {
+  text-align: center;
+  padding: 5px;
+}
+
+.cart-item-row .image-col {
+  width: 100px;
+}
+.cart-item-row .product-col {
+  font-weight: 500;
+}
+.cart-item-row .remove-col button {
+  width: 16px;
+  background-color: white;
+  border: none;
+}
+.quantity-col span {
+  display: inline-block;
+  width: 30px;
+}
+.quantity-col button {
+  color: black;
+  background-color: white;
+  border: none;
+  transform: scale(2);
+}

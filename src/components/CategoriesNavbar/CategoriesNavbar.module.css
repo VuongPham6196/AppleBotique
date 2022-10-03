@@ -1,0 +1,16 @@
+.categories-navbar {
+  width: 30%;
+  margin-bottom: 30px;
+}
+
+.categories-navbar h3 {
+  padding: 20px 0px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.categories-brand {
+  background-color: black;
+  color: white;
+  padding: 5px 20px;
+}

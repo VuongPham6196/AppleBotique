@@ -1,0 +1,14 @@
+.related-products-container {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.related-products-header {
+  font-weight: 500;
+  color: black;
+  margin: 20px 0;
+  font-size: 20px;
+}
+.related-products-container .product-item {
+  max-width: 20%;
+}

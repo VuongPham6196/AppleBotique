@@ -1,0 +1,25 @@
+.pages-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 150px;
+  background-color: rgba(128, 128, 128, 0.1);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.pages-banner a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  font-weight: 500;
+}
+
+.pages-banner .active {
+  color: rgb(150, 150, 150);
+}
+
+.pages-banner h2 {
+  color: rgb(50, 50, 50);
+  font-size: 32px;
+  font-weight: 500;
+}

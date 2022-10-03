@@ -1,0 +1,32 @@
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner .banner-content {
+  position: absolute;
+  width: 100%;
+  padding-left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner-content h2 {
+  margin: 15px 0;
+  font-size: 28px;
+}
+
+.banner-content a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 10px;
+  display: inline-block;
+}
+
+.banner-content a:active {
+  color: darkgoldenrod;
+}

@@ -1,0 +1,87 @@
+.backdrop {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.modal .modal-image {
+  display: flex;
+  width: 50%;
+  padding: 20px;
+  justify-content: center;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal .modal-content {
+  width: 50%;
+  padding: 40px;
+}
+
+.modal-content h2 {
+  font-size: 20px;
+  color: rgb(50, 50, 50);
+}
+
+.modal-content p {
+  color: rgb(90, 90, 90);
+  overflow: auto;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin: 10px 0px;
+}
+.modal-content button {
+  width: 120px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+
+.modal-content button:hover {
+  cursor: pointer;
+}
+
+.modal-content button:active {
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 50rem;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
