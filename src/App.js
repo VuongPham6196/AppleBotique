@@ -27,7 +27,7 @@ function App() {
           <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </Layout>
-    </Fragment>
+  </Fragment>
   );
 }
 
